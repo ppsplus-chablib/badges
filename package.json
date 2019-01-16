@@ -1,6 +1,6 @@
 {
   "name": "cb-badges",
-  "version": "1.3.1",
+  "version": "1.3.3",
   "description": "The definitive collection of badges for rendering",
   "homepage": "https://github.com/ppsplus-chablib/badges",
   "license": "MIT",
@@ -163,7 +163,7 @@
   "main": "index.js",
   "browser": "edition-browsers/index.js",
   "dependencies": {
-    "editions": "^2.1.0"
+    "editions": "^2.1.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.0",
