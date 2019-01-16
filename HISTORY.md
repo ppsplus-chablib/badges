@@ -1,5 +1,9 @@
 # History
 
+## v1.3.0 2019 January 15
+
+-   Updated To add target to links
+
 ## v1.3.0 2018 December 19
 
 -   Updated [base files](https://github.com/bevry/base) and [editions](https://editions.bevry.me) using [boundation](https://github.com/bevry/boundation)
