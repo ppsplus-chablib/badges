@@ -26,6 +26,18 @@ kava.suite('badges', function(suite, test) {
 				title: 'title'
 			}
 		],
+		[
+			'shields',
+			{
+				left: 'left',
+				right: 'right',
+				color: 'red',
+				alt: 'alt',
+				url: 'url',
+				title: 'title',
+				target: '_blank'
+			}
+		],
 		'---',
 		// Development Badges
 		'npmversion',
@@ -126,6 +138,7 @@ kava.suite('badges', function(suite, test) {
 		`<span class="badge-badge"><a href="url" title="title"><img src="image" alt="alt" /></a></span>`,
 		`<span class="badge-shields"><a href="url" title="title"><img src="https://img.shields.io/badge/left-right-yellow.svg" alt="alt" /></a></span>`,
 		`<span class="badge-shields"><a href="url" title="title"><img src="https://img.shields.io/badge/left-right-red.svg" alt="alt" /></a></span>`,
+		`<span class="badge-shields"><a href="url" title="title" target="_blank" ><img src="https://img.shields.io/badge/left-right-red.svg" alt="alt" /></a></span>`,
 		`<br class="badge-separator" />`,
 		`<span class="badge-npmversion"><a href="https://npmjs.org/package/badges" title="View this project on NPM"><img src="https://img.shields.io/npm/v/badges.svg" alt="NPM version" /></a></span>`,
 		`<span class="badge-npmdownloads"><a href="https://npmjs.org/package/badges" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/badges.svg" alt="NPM downloads" /></a></span>`,

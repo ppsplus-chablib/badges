@@ -17,7 +17,7 @@ const querystring = require('querystring')
  * @param {string} [opts.title] The title attribute for the link
  * @return {string} the result badge
  */
-function badge({ image, alt, url, title }) {
+function badge({ image, alt, url, title, target = '_self'}) {
 	// Check
 	if (!image) throw new Error('image is missing')
 
@@ -26,8 +26,13 @@ function badge({ image, alt, url, title }) {
 		? `<img src="${image}" alt="${alt}" />`
 		: `<img src="${image}" />`
 	if (url) {
+		
+		let targetString = "";
+		if (target !== '_self' && target !== 'undefined' ) //We only need to set the target string if it is not the default target. 
+			targetString = ` target="${target}" `
+		
 		result =
-			(title ? `<a href="${url}" title="${title}">` : `<a href="${url}">`) +
+			(title ? `<a href="${url}" title="${title}"${targetString}>` : `<a href="${url}"${targetString}`) +
 			result +
 			'</a>'
 	}
@@ -45,16 +50,17 @@ badge.badgeCategory = 'custom'
  * @param {string} [opts.alt] The alt attribute for the image
  * @param {string} [opts.url] The URL for the link
  * @param {string} [opts.title] The title attribute for the link
+ * @param {string} [opts.target] The target window for the link
  * @return {string} the result badge
  */
-function shields({ left, right, color = 'yellow', alt, url, title }) {
+function shields({ left, right, color = 'yellow', alt, url, title, target = '_self' }) {
 	// Check
 	if (!left) throw new Error('left is missing')
 	if (!right) throw new Error('right is missing')
 
 	// Create
 	const image = `https://img.shields.io/badge/${left}-${right}-${color}.svg`
-	return badge({ image, alt, url, title })
+	return badge({ image, alt, url, title, target })
 }
 shields.badgeCategory = 'custom'
 
