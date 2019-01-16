@@ -1,6 +1,10 @@
 # History
 
-## v1.3.0 2019 January 15
+## v1.3.2 2019 January 15
+
+-   Updating docs
+
+## v1.3.1 2019 January 15
 
 -   Updated To add target to links
 
